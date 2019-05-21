@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 This project was bootstrapped with Create React App.
 
 Below you will find some information on how to perform common tasks. You can find the most recent version of this guide here.
@@ -11,6 +11,8 @@ When you run create-react-app, it always creates the project with the latest ver
 
 For routing we use react-router-dom.
 
+Basic tests implemente unsing Jest and Enzyme.
+
 These files must exist with exact filenames:
 
 public/index.html is the page template; src/index.js or if using typescipt index.tsx is the JavaScript entry point. Available Scripts In the project directory, you can run:
@@ -18,6 +20,4 @@ public/index.html is the page template; src/index.js or if using typescipt index
 npm start Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console.
-=======
-# Smarter-CLick
->>>>>>> 473d8eb023a701a12de868145e03e4fda810952a
+
