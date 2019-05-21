@@ -11,7 +11,9 @@ When you run create-react-app, it always creates the project with the latest ver
 
 For routing we use react-router-dom.
 
-Basic tests implemente unsing Jest and Enzyme.
+Basic tests implemented unsing Jest and Enzyme.
+
+npm test Runs the tests.
 
 These files must exist with exact filenames:
 
