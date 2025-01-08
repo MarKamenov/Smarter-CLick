@@ -1,45 +1,33 @@
 import * as React from 'react';
-import {Box, Flex } from 'grid-styled';
+import { Box, Flex } from 'grid-styled';
 import styled from './theme';
 import NavBar from './components/NavBar';
-import Menu from './components/Menu'
-import {BrowserRouter as Router,  Route} from 'react-router-dom'
-import {routes} from './routes'
+import Menu from './components/Menu';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { routes } from './routes';
 
 interface IAppProps {
 	className?: string;
 }
 
 class App extends React.Component<IAppProps> {
-	constructor(props: IAppProps) {
-		super(props);
-	}
-
 	public render() {
 		return (
-		<Box className={this.props.className}>
-			<Router>
-			<Flex className='menu' py={2} flexDirection="column" alignItems="center">
-			<NavBar>
-				<Menu />
-			</NavBar>
-		</Flex>	
-	
-			  {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              component={route.main}
-            />
-					))}
-				
-	</Router>
-	</Box>
+			<BrowserRouter>
+				<Box className={this.props.className}>
+					<Flex className="menu" py={2} flexDirection="column" alignItems="center">
+						<NavBar>
+							<Menu />
+						</NavBar>
+					</Flex>
+					<Routes>{routes.map(route => <Route key={route.path} path={route.path} element={route.element} />)}</Routes>
+				</Box>
+			</BrowserRouter>
 		);
 	}
 }
 
 export default styled(App)`
-    min-height: 98vh;
-		overflow-y:hidden;
+	min-height: 98vh;
+	overflow-y: hidden;
 `;

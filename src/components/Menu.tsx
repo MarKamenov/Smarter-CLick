@@ -1,27 +1,29 @@
 import * as React from 'react';
 import { Box, Flex } from 'grid-styled';
 import styled from 'styled-components';
-import { NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 interface IMenuProps {
 	className?: string;
 }
 
 class Menu extends React.Component<IMenuProps> {
-
-	constructor(props: IMenuProps) {
-		super(props);
-	}
-
 	public render() {
-
 		return (
 			<Flex className={this.props.className} py={2} flexDirection="column" alignItems="center">
-			<Box className='links'><NavLink to='/'>Home</NavLink></Box>
-			<Box className='links'><NavLink to='/photo'>Photo</NavLink></Box>
-			<Box className='links'><NavLink to='/user' exact>Login</NavLink></Box>
-			<Box className='links'><NavLink to='/dashboard' exact>Dashboard</NavLink></Box>
-		</Flex>	
+				<Box className="links">
+					<NavLink to="/">Home</NavLink>
+				</Box>
+				<Box className="links">
+					<NavLink to="/photo">Photo</NavLink>
+				</Box>
+				<Box className="links">
+					<NavLink to="/user">Login</NavLink>
+				</Box>
+				<Box className="links">
+					<NavLink to="/dashboard">Dashboard</NavLink>
+				</Box>
+			</Flex>
 		);
 	}
 }
