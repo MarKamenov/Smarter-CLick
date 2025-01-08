@@ -9,7 +9,7 @@ export interface IKpiPanelItemProps {
 	content: () => any;
 }
 
-const UnstyledKpiPanelItem: React.SFC<any> = ({ className, title, currency, content }) => (
+const UnstyledKpiPanelItem: React.FC<IKpiPanelItemProps> = ({ className, title, currency, content }) => (
 	<Box className={className}>
 		<Box className="title">{title}</Box>
 		<Box>

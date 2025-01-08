@@ -20,5 +20,15 @@
 		"skipLibCheck": true,
 		"experimentalDecorators": true
 	},
-	"exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"]
+	"exclude": [
+		"node_modules",
+		"build",
+		"scripts",
+		"acceptance-tests",
+		"webpack",
+		"jest",
+		"src/setupTests.ts",
+		"jest.config.js",
+		"setupEnzyme.ts"
+	]
 }
